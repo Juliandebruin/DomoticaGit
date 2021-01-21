@@ -1,4 +1,17 @@
 QT       += core gui
+QT       += core
+QT       += network
+QT       -= gui
+
+TARGET = QUdpSocket
+CONFIG   += console
+CONFIG   -= app_bundle
+
+TEMPLATE = app
+
+
+SOURCES += main.cpp \
+    myudp.cpp
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,7 +26,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    myudp.h
 
 FORMS += \
     mainwindow.ui
